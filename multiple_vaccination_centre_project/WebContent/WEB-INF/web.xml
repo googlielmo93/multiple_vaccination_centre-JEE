@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>googlielmo93</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>area_medico</servlet-name>
+    <jsp-file>/protected/area_medico/index.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>area_asp</servlet-name>
+    <jsp-file>/protected/area_medico/index.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>area_utente</servlet-name>
+    <jsp-file>/protected/area_utente/index.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>area_accettazione</servlet-name>
+    <jsp-file>/protected/area_accettazione/index.jsp</jsp-file>
+  </servlet>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>protectedAreaMedico</web-resource-name>
+      <url-pattern>/protected/area_medico/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>medico</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>medico</role-name>
+  </security-role>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>protectedAreaAsp</web-resource-name>
+      <url-pattern>/protected/area_asp/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+	  <role-name>asp</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>asp</role-name>
+  </security-role>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>protectedAreaAccettazione</web-resource-name>
+      <url-pattern>/protected/area_accettazione/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+	  <role-name>accettazione</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>accettazione</role-name>
+  </security-role>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>protectedAreaUtente</web-resource-name>
+      <url-pattern>/protected/area_utente/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+	  <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>user</role-name>
+  </security-role>
+
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/view/login.jsp</form-login-page>
+      <form-error-page>/view/login.jsp?msgError=logerror</form-error-page>
+    </form-login-config>
+  </login-config>
+
+  <error-page>
+	<error-code>404</error-code>
+	<location>/error404.html</location>
+  </error-page>
+
+  <error-page>
+	<error-code>403</error-code>
+	<location>/view/login.jsp?msgError=accessDenied</location>
+  </error-page>
+</web-app>

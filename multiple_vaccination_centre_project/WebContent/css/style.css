@@ -1,0 +1,114 @@
+.link_login:visited {
+    color: green!important;
+}
+
+.link_login:hover, .link_login:active {
+    color: green!important;
+}
+
+.link_login {
+    color: green!important;
+}
+
+
+
+.link_custom:visited {
+    color: green!important;
+    text-decoration: none;
+    text-align:center!important;
+}
+
+.link_custom:hover, .link_custom:active {
+    color: #04aa6d!important;
+    text-decoration: none;
+    opacity: 0.85;
+    text-align:center!important;
+}
+
+.link_custom {
+	text-decoration: none!important;
+    color: green!important;
+    text-align:center!important;
+}
+
+
+.codPrntDiv{
+	border: solid 5px #17a2b8;
+	border-radius: 5px;
+	padding: 3%;
+	font-weight: bold;
+	font-size : 250%;
+}
+
+.codInfoDiv{
+	border: solid 1px #17a2b8;
+	border-radius: 5px;
+}
+
+.labelCodPrnt{
+	font-weight: bold;
+	font-size : 170%;
+}
+
+.labelCodPrntInfo{
+	font-weight: bold;
+	font-size : 160%;
+}
+
+.borderGroup{
+	border: solid 1px #17a2b8;
+	border-radius: 5px;
+	padding: 3%;
+}
+
+.centraverticale {
+    display: inline-block!important;
+    vertical-align: middle!important;
+    float: none!important;
+}
+
+.emailAsUserNameDiv{
+	position: absolute;
+	max-width: 25%;
+	z-index : 998;
+	margin-left:-26%;
+	margin-top:-5%;
+}
+
+.emailAsUserName {
+	display: none;
+	font-size: 90%;
+	font-weight: bold;
+}
+
+#emailAsUserNameClose{
+	position:relative;
+	 opacity: 0.85;
+	 background-color: #ffffff;
+	 margin-top: -5%;
+	 border-radius: 50%;
+	 height: 10px;
+	 width: 20px;
+	 padding-block-end: 20px;
+	 cursor: pointer;
+	 color: #17a2b8;
+	 border: solid 1px #17a2b8;
+	 float: right;
+	 z-index: 999;
+}
+
+
+.card_mod:hover{
+    opacity: 0.65;
+}
+
+.spinnerCustom{
+	display: block;
+	position: fixed;
+	z-index: 1031;
+	width: 100px;
+	height:100px;
+	top: calc( 50% - ( 100px / 2) );
+	right: calc( 50% - ( 100px / 2) );
+	
+}
